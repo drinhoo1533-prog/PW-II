@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Inter', Arial, sans-serif;
+
+    background:
+        radial-gradient(circle at 20% 20%, #5b21b6 0%, transparent 35%),
+        radial-gradient(circle at 80% 80%, #2563eb 0%, transparent 35%),
+        linear-gradient(135deg, #09090f, #111827);
+
+    color: white;
+}
+
+/* CALCULADORA */
+
+.calculadora {
+    width: 370px;
+    padding: 25px;
+
+    background: rgba(20, 24, 38, 0.92);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.5),
+        inset 0 1px 1px rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(20px);
+}
+
+/* TOPO */
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.titulo {
+    font-size: 18px;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+.icone {
+    width: 35px;
+    height: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: #a78bfa;
+
+    font-size: 18px;
+}
+
+/* VISOR */
+
+.visor {
+    height: 145px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    background: rgba(0, 0, 0, 0.25);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+#operacao {
+    min-height: 25px;
+
+    color: #94a3b8;
+
+    font-size: 17px;
+
+    margin-bottom: 8px;
+}
+
+#resultado {
+    max-width: 100%;
+
+    color: white;
+
+    font-size: 42px;
+    font-weight: 600;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* BOTÕES */
+
+.botoes {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+button {
+    height: 62px;
+
+    border: none;
+    border-radius: 17px;
+
+    background: #252b3d;
+
+    color: #f8fafc;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.15s ease,
+        background 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+button:hover {
+    background: #30384e;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+/* BOTÕES DE FUNÇÃO */
+
+.funcao {
+    background: #343b50;
+
+    color: #c4b5fd;
+}
+
+.funcao:hover {
+    background: #414a63;
+}
+
+/* OPERADORES */
+
+.operador {
+    background: linear-gradient(135deg, #7c3aed, #6366f1);
+
+    color: white;
+
+    box-shadow: 0 5px 15px rgba(124, 58, 237, 0.25);
+}
+
+.operador:hover {
+    background: linear-gradient(135deg, #8b5cf6, #818cf8);
+}
+
+/* IGUAL */
+
+.igual {
+    background: linear-gradient(135deg, #06b6d4, #2563eb);
+
+    color: white;
+
+    box-shadow: 0 5px 20px rgba(37, 99, 235, 0.35);
+}
+
+.igual:hover {
+    background: linear-gradient(135deg, #22d3ee, #3b82f6);
+}
+
+/* ZERO */
+
+.zero {
+    grid-column: span 2;
+}
+
+/* RODAPÉ */
+
+.rodape {
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+/* CELULAR */
+
+@media (max-width: 450px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .calculadora {
+        width: 100%;
+        max-width: 370px;
+        padding: 20px;
+    }
+
+    button {
+        height: 58px;
+    }
+
+    #resultado {
+        font-size: 36px;
+    }
+}
