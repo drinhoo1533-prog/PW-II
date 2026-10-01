@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>La Bella Pizza</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            🍕 <span>La Bella</span>
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <button class="carrinho-btn" onclick="abrirCarrinho()">
+            🛒 <span id="contador">0</span>
+        </button>
+    </header>
+
+    <main>
+
+        <section id="inicio" class="hero">
+
+            <div class="hero-texto">
+                <span class="tag">🔥 A melhor pizza da cidade</span>
+
+                <h1>
+                    Pizza feita com
+                    <span>amor.</span>
+                </h1>
+
+                <p>
+                    Massa artesanal, ingredientes selecionados
+                    e aquele sabor que faz você querer repetir.
+                </p>
+
+                <div class="hero-botoes">
+                    <a href="#cardapio" class="btn principal">
+                        Ver Cardápio
+                    </a>
+
+                    <a href="#sobre" class="btn secundario">
+                        Conheça a gente
+                    </a>
+                </div>
+            </div>
+
+            <div class="pizza-hero">
+                <div class="pizza-circle">
+                    🍕
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="beneficios">
+
+            <div class="beneficio">
+                <span>🚀</span>
+                <div>
+                    <h3>Entrega rápida</h3>
+                    <p>Receba sua pizza quentinha.</p>
+                </div>
+            </div>
+
+            <div class="beneficio">
+                <span>👨‍🍳</span>
+                <div>
+                    <h3>Massa artesanal</h3>
+                    <p>Preparada todos os dias.</p>
+                </div>
+            </div>
+
+            <div class="beneficio">
+                <span>⭐</span>
+                <div>
+                    <h3>Qualidade</h3>
+                    <p>Ingredientes selecionados.</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section id="cardapio" class="cardapio">
+
+            <div class="titulo-secao">
+                <span>🍕 NOSSO CARDÁPIO</span>
+
+                <h2>Escolha sua favorita</h2>
+
+                <p>
+                    Sabores preparados especialmente para você.
+                </p>
+            </div>
+
+            <div class="filtros">
+                <button class="filtro ativo" onclick="filtrar('todas', this)">
+                    Todas
+                </button>
+
+                <button class="filtro" onclick="filtrar('tradicional', this)">
+                    Tradicionais
+                </button>
+
+                <button class="filtro" onclick="filtrar('especial', this)">
+                    Especiais
+                </button>
+            </div>
+
+
+            <div class="produtos">
+
+                <article class="pizza-card" data-categoria="tradicional">
+
+                    <div class="pizza-imagem">
+                        🍕
+                        <span class="badge">Popular</span>
+                    </div>
+
+                    <div class="pizza-info">
+                        <h3>Calabresa</h3>
+
+                        <p>
+                            Molho de tomate, mussarela,
+                            calabresa e cebola.
+                        </p>
+
+                        <div class="pizza-footer">
+                            <strong>R$ 39,90</strong>
+
+                            <button onclick="adicionarCarrinho('Calabresa', 39.90)">
+                                +
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="pizza-card" data-categoria="tradicional">
+
+                    <div class="pizza-imagem">
+                        🧀
+                    </div>
+
+                    <div class="pizza-info">
+                        <h3>Quatro Queijos</h3>
+
+                        <p>
+                            Mussarela, provolone, parmesão
+                            e gorgonzola.
+                        </p>
+
+                        <div class="pizza-footer">
+                            <strong>R$ 44,90</strong>
+
+                            <button onclick="adicionarCarrinho('Quatro Queijos', 44.90)">
+                                +
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="pizza-card" data-categoria="especial">
+
+                    <div class="pizza-imagem">
+                        🍖
+                        <span class="badge especial">Especial</span>
+                    </div>
+
+                    <div class="pizza-info">
+                        <h3>La Bella</h3>
+
+                        <p>
+                            Mussarela, presunto parma,
+                            tomate-cereja e manjericão.
+                        </p>
+
+                        <div class="pizza-footer">
+                            <strong>R$ 54,90</strong>
+
+                            <button onclick="adicionarCarrinho('La Bella', 54.90)">
+                                +
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+
+                <article class="pizza-card" data-categoria="especial">
+
+                    <div class="pizza-imagem">
+                        🌶️
+                    </div>
+
+                    <div class="pizza-info">
+                        <h3>Diavola</h3>
+
+                        <p>
+                            Mussarela, pepperoni,
+                            pimenta e molho especial.
+                        </p>
+
+                        <div class="pizza-footer">
+                            <strong>R$ 49,90</strong>
+
+                            <button onclick="adicionarCarrinho('Diavola', 49.90)">
+                                +
+                            </button>
+                        </div>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section id="sobre" class="sobre">
+
+            <div class="sobre-imagem">
+                🍕
+            </div>
+
+            <div class="sobre-texto">
+
+                <span>❤️ FEITA COM PAIXÃO</span>
+
+                <h2>
+                    Uma pizza que conta
+                    uma história.
+                </h2>
+
+                <p>
+                    Na La Bella Pizza, acreditamos que uma boa pizza
+                    começa com ingredientes de qualidade e termina
+                    com pessoas felizes ao redor da mesa.
+                </p>
+
+                <p>
+                    Nossa massa é preparada artesanalmente e passa
+                    pelo tempo necessário para alcançar aquele sabor
+                    especial.
+                </p>
+
+                <a href="#contato" class="btn principal">
+                    Peça agora
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section id="contato" class="contato">
+
+            <div class="titulo-secao">
+                <span>📍 FALE CONOSCO</span>
+
+                <h2>Faça seu pedido</h2>
+
+                <p>
+                    Estamos esperando seu pedido!
+                </p>
+            </div>
+
+            <div class="contato-grid">
+
+                <div class="contato-card">
+                    <span>📱</span>
+                    <h3>WhatsApp</h3>
+                    <p>(11) 99999-9999</p>
+                </div>
+
+                <div class="contato-card">
+                    <span>📍</span>
+                    <h3>Endereço</h3>
+                    <p>Rua das Pizzas, 123</p>
+                </div>
+
+                <div class="contato-card">
+                    <span>🕐</span>
+                    <h3>Horário</h3>
+                    <p>18h às 23h</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="logo">
+            🍕 <span>La Bella</span>
+        </div>
+
+        <p>
+            © 2026 La Bella Pizza. Todos os direitos reservados.
+        </p>
+
+        <div class="redes">
+            Instagram · Facebook · WhatsApp
+        </div>
+
+    </footer>
+
+
+    <!-- Carrinho -->
+
+    <div id="carrinho" class="carrinho">
+
+        <div class="carrinho-header">
+            <h2>🛒 Seu pedido</h2>
+
+            <button onclick="fecharCarrinho()">×</button>
+        </div>
+
+        <div id="itensCarrinho" class="itens-carrinho">
+            <p class="carrinho-vazio">
+                Seu carrinho está vazio.
+            </p>
+        </div>
+
+        <div class="carrinho-total">
+            <span>Total</span>
+            <strong id="total">R$ 0,00</strong>
+        </div>
+
+        <button class="finalizar" onclick="finalizarPedido()">
+            Finalizar pedido
+        </button>
+
+    </div>
+
+    <div id="overlay" class="overlay" onclick="fecharCarrinho()"></div>
+
+
+    <script src="variaveis.jv"></script>
+
+</body>
+</html>
