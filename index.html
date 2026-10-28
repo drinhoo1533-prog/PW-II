@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETEC | Cadastro de Perfil</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#inicio" class="logo">ETEC<span>.</span></a>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#cadastro">Cadastro</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <span class="tag">PROJETO ESCOLAR • TECNOLOGIA</span>
+
+                <h1>Seu perfil.<br>
+                    <span>Seu estilo.</span>
+                </h1>
+
+                <p>
+                    Queremos conhecer melhor você, seus interesses,
+                    sua região e suas marcas favoritas.
+                    Preencha o formulário abaixo!
+                </p>
+
+                <a href="#cadastro" class="btn">Fazer meu cadastro ↓</a>
+            </div>
+
+            <div class="hero-card">
+                <div class="icon">E</div>
+                <span>ETEC • FORMULÁRIO</span>
+                <h2>Conectando<br>pessoas e ideias.</h2>
+                <div class="decoracao"></div>
+                <p>Educação, inovação e futuro.</p>
+            </div>
+        </section>
+
+        <section class="cadastro" id="cadastro">
+            <div class="section-title">
+                <span class="tag">CADASTRO DE PERFIL</span>
+                <h2>Conte um pouco sobre você</h2>
+                <p>Preencha os campos necessários abaixo.</p>
+            </div>
+
+            <form id="formulario">
+
+                <h3>01. Informações pessoais</h3>
+
+                <div class="grid">
+                    <div class="campo">
+                        <label for="nome">Nome completo *</label>
+                        <input type="text" id="nome" name="nome"
+                               placeholder="Seu nome completo"
+                               maxlength="100" autocomplete="name" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="idade">Idade *</label>
+                        <input type="number" id="idade" name="idade"
+                               placeholder="Sua idade"
+                               min="1" max="120" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email"
+                               placeholder="voce@exemplo.com"
+                               maxlength="254" autocomplete="email" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone (opcional)</label>
+                        <input type="tel" id="telefone" name="telefone"
+                               placeholder="(11) 99999-9999"
+                               autocomplete="tel">
+                    </div>
+                </div>
+
+                <h3>02. Endereço e região</h3>
+
+                <div class="grid">
+                    <div class="campo">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" name="cep"
+                               placeholder="00000-000"
+                               maxlength="9" inputmode="numeric"
+                               autocomplete="postal-code">
+                    </div>
+
+                    <div class="campo">
+                        <label for="estado">Estado *</label>
+                        <select id="estado" name="estado" required>
+                            <option value="">Selecione seu estado</option>
+                            <option value="AC">Acre</option>
+                            <option value="AL">Alagoas</option>
+                            <option value="AP">Amapá</option>
+                            <option value="AM">Amazonas</option>
+                            <option value="BA">Bahia</option>
+                            <option value="CE">Ceará</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="ES">Espírito Santo</option>
+                            <option value="GO">Goiás</option>
+                            <option value="MA">Maranhão</option>
+                            <option value="MT">Mato Grosso</option>
+                            <option value="MS">Mato Grosso do Sul</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="PA">Pará</option>
+                            <option value="PB">Paraíba</option>
+                            <option value="PR">Paraná</option>
+                            <option value="PE">Pernambuco</option>
+                            <option value="PI">Piauí</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="RN">Rio Grande do Norte</option>
+                            <option value="RS">Rio Grande do Sul</option>
+                            <option value="RO">Rondônia</option>
+                            <option value="RR">Roraima</option>
+                            <option value="SC">Santa Catarina</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="SE">Sergipe</option>
+                            <option value="TO">Tocantins</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="cidade">Cidade *</label>
+                        <input type="text" id="cidade" name="cidade"
+                               placeholder="Sua cidade"
+                               maxlength="100" autocomplete="address-level2" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="regiao">Região onde mora *</label>
+                        <select id="regiao" name="regiao" required>
+                            <option value="">Selecione a região</option>
+                            <option value="Norte">Norte</option>
+                            <option value="Nordeste">Nordeste</option>
+                            <option value="Centro-Oeste">Centro-Oeste</option>
+                            <option value="Sudeste">Sudeste</option>
+                            <option value="Sul">Sul</option>
+                        </select>
+                    </div>
+
+                    <div class="campo campo-completo">
+                        <label for="bairro">Bairro (opcional)</label>
+                        <input type="text" id="bairro" name="bairro"
+                               placeholder="Seu bairro" maxlength="100"
+                               autocomplete="address-level3">
+                    </div>
+                </div>
+
+                <h3>03. Seus gostos e interesses</h3>
+
+                <div class="campo">
+                    <label for="marcas">Quais marcas você gosta? *</label>
+                    <p class="ajuda">
+                        Escreva as marcas separadas por vírgula.
+                    </p>
+                    <textarea id="marcas" name="marcas"
+                              placeholder="Ex.: Nike, Adidas, Apple, Samsung..."
+                              maxlength="500" rows="3" required></textarea>
+                </div>
+
+                <div class="grid">
+                    <div class="campo">
+                        <label for="categoria">Categoria favorita *</label>
+                        <select id="categoria" name="categoria" required>
+                            <option value="">Escolha uma categoria</option>
+                            <option value="Moda">Moda e roupas</option>
+                            <option value="Tecnologia">Tecnologia</option>
+                            <option value="Beleza">Beleza</option>
+                            <option value="Esportes">Esportes</option>
+                            <option value="Games">Games</option>
+                            <option value="Música">Música</option>
+                            <option value="Alimentação">Alimentação</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="hobby">Hobby favorito</label>
+                        <input type="text" id="hobby" name="hobby"
+                               placeholder="Ex.: jogar, ler, desenhar..."
+                               maxlength="150">
+                    </div>
+                </div>
+
+                <div class="aviso">
+                    <strong>Privacidade:</strong>
+                    este formulário é uma demonstração escolar.
+                    Não informe CPF, documentos ou outros dados sensíveis
+                    em uma página de teste.
+                </div>
+
+                <label class="termos">
+                    <input type="checkbox" id="autorizacao" required>
+                    <span>Confirmo que as informações fornecidas são minhas
+                    e autorizo seu uso nesta atividade escolar.</span>
+                </label>
+
+                <button type="submit" class="btn btn-enviar">
+                    Finalizar cadastro →
+                </button>
+
+                <p id="mensagem" role="status" aria-live="polite"></p>
+
+            </form>
+        </section>
+
+        <section class="sobre" id="sobre">
+            <span class="tag">NOSSO PROJETO</span>
+            <h2>Aprender criando.</h2>
+            <p>
+                Projeto acadêmico desenvolvido para praticar HTML,
+                CSS e JavaScript por meio de um formulário interativo.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>ETEC • Projeto escolar de desenvolvimento web</p>
+        <p>HTML + CSS + JavaScript</p>
+    </footer>
+
+</body>
+</html>

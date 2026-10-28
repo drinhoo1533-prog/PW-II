@@ -1,0 +1,381 @@
+
+:root {
+    --verde: #087f5b;
+    --verde-escuro: #064e3b;
+    --fundo: #f5f7f5;
+    --texto: #202923;
+    --cinza: #68736b;
+    --branco: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: white;
+    border-bottom: 1px solid #e5ebe5;
+}
+
+.logo {
+    color: var(--texto);
+    font-size: 28px;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: -2px;
+}
+
+.logo span {
+    color: var(--verde);
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--texto);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--verde);
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 80px 8%;
+    background: #eaf2ec;
+    min-height: 480px;
+}
+
+.hero-content {
+    max-width: 540px;
+}
+
+.tag {
+    display: inline-block;
+    color: var(--verde);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(44px, 6vw, 68px);
+    line-height: 1.08;
+    letter-spacing: -3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--verde);
+}
+
+.hero-content > p {
+    color: #56645b;
+    margin-bottom: 30px;
+    max-width: 460px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 23px;
+    border: none;
+    border-radius: 8px;
+    background: var(--verde);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: var(--verde-escuro);
+    transform: translateY(-2px);
+}
+
+.hero-card {
+    width: 310px;
+    min-width: 270px;
+    min-height: 330px;
+    padding: 30px;
+    border-radius: 18px;
+    background: var(--verde-escuro);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 18px 45px #064e3b20;
+}
+
+.icon {
+    display: grid;
+    place-items: center;
+    width: 55px;
+    height: 55px;
+    border: 1px solid #ffffff80;
+    border-radius: 12px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.hero-card > span {
+    color: #b8e4ce;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.hero-card h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.decoracao {
+    height: 3px;
+    width: 55px;
+    background: #8de0b5;
+    margin-bottom: 15px;
+}
+
+.hero-card p {
+    color: #d5e7dc;
+    font-size: 14px;
+}
+
+.cadastro {
+    max-width: 900px;
+    padding: 80px 20px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title h2,
+.sobre h2 {
+    font-size: clamp(28px, 4vw, 38px);
+    letter-spacing: -1px;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.section-title p,
+.sobre p {
+    color: var(--cinza);
+}
+
+form {
+    padding: 35px;
+    background: white;
+    border: 1px solid #e4eae4;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px #1b38200a;
+}
+
+form h3 {
+    font-size: 17px;
+    padding-bottom: 14px;
+    margin: 10px 0 25px;
+    border-bottom: 1px solid #e8ece8;
+}
+
+form h3:not(:first-child) {
+    margin-top: 35px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.campo {
+    min-width: 0;
+    margin-bottom: 22px;
+}
+
+.campo-completo {
+    grid-column: 1 / -1;
+}
+
+.campo label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dce3dc;
+    border-radius: 8px;
+    background: white;
+    color: var(--texto);
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 3px #087f5b18;
+}
+
+.campo textarea {
+    resize: vertical;
+}
+
+.ajuda {
+    font-size: 12px;
+    color: var(--cinza);
+    margin-bottom: 8px;
+}
+
+.aviso {
+    padding: 16px;
+    border-radius: 8px;
+    background: #f0f5f0;
+    color: #46574b;
+    font-size: 13px;
+    margin: 12px 0 22px;
+}
+
+.termos {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--cinza);
+    margin-bottom: 25px;
+}
+
+.termos input {
+    margin-top: 5px;
+    accent-color: var(--verde);
+}
+
+.btn-enviar {
+    width: 100%;
+}
+
+#mensagem {
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+.sucesso {
+    color: var(--verde);
+}
+
+.erro {
+    color: #b42318;
+}
+
+.sobre {
+    text-align: center;
+    padding: 65px 20px;
+    background: #eaf2ec;
+}
+
+.sobre p {
+    max-width: 550px;
+    margin: auto;
+}
+
+footer {
+    padding: 25px 20px;
+    text-align: center;
+    background: white;
+    color: var(--cinza);
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+    .header {
+        padding: 18px 6%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 55px 7%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .cadastro {
+        padding: 55px 15px;
+    }
+
+    form {
+        padding: 24px 18px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .campo-completo {
+        grid-column: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto;
+        transition: none;
+    }
+}
